@@ -42,6 +42,7 @@ int server_connect(int from_client) {
   if (strcmp(buf, ACK) == 0) {
     printf("handshake is successful\n");
   }
+  
   return to_client;
 }
 

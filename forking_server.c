@@ -18,9 +18,9 @@ int main() {
   from_client = server_setup();
 
   if (fork() == 0) {
-    server_connect(from_client);
+    to_client = server_connect(from_client);
   } else {
-    
+    close(from_client);
   }
 }
 
