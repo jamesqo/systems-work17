@@ -13,6 +13,8 @@ static void sighandler(int signo) {
 }
 
 int main() {
+  signal(SIGINT, sighandler);
+  
   int from_client;
 
   while (1) {
