@@ -35,7 +35,7 @@ int server_connect(int from_client) {
   read(from_client, buf, sizeof(buf));
   int to_client = open(buf, O_WRONLY);
   
-  write(to_client, ACK, sizeof(ACK));
+  write(to_client, buf, sizeof(ACK));
 
   read(from_client, buf, sizeof(buf));
 
